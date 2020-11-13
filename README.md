@@ -10,5 +10,7 @@ Web and mobile app to manage budgets
 
 ### Starting the project
 `clone this repository`
+
 `yarn` to install the packages
+
 `yarn start` to run locally
