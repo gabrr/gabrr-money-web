@@ -1,7 +1,7 @@
 ## gabrr money
 Web and mobile app to manage budgets
 
-### Stack using
+### Stack being using
 - React JS
 - React Native
 - Styled Components
