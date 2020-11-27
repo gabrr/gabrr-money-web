@@ -1,8 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-const Home: React.FC = () => {
-
+const Settings: React.FC = () => {
     const history = useHistory()
 
     const linkTo = (path: string) => {
@@ -11,10 +10,10 @@ const Home: React.FC = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
-            <button onClick={() => linkTo('/settings')} ></button>
+           <h1>Settings page</h1> 
+           <button onClick={() => linkTo('/')} ></button>
         </div>
     )
 }
 
-export default Home
+export default Settings

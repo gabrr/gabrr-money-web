@@ -1,23 +1,14 @@
 // libraries
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom"
+import { Redirect, Route } from "react-router-dom"
+
+// functions
+import auth from '../../auth'
 
 // components
 import { Login } from '../../components/pages'
 
-
-const PrivateRoutes = () => {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={<Login />} />
-            </Switch>
-        </Router>
-    )
-}
-
-export default PrivateRoutes
+const PublicRoutes = () => <>
+    
+</>
+export default PublicRoutes
