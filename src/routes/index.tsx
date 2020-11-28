@@ -1,12 +1,13 @@
 // libraries
 import React from 'react'
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // components
 import ProtectedRoute from './protectedRoute'
 import {
     Home,
     Login,
+    Page404,
     Settings
 } from '../components/pages'
 
@@ -41,7 +42,7 @@ const routes = [
     {
       title: '404',
       path: '/*',
-      component: () => <> <h1>This page doesnt exist</h1> </>,
+      component: Page404,
       isMenuItem: false,
       exact: false,
       isPrivate: false,
@@ -54,9 +55,9 @@ const Routes = () => {
     return (
         <Router>
             <Switch>
-                {routes.map(route => route.isPrivate
-                    ? <ProtectedRoute key={route.title} {...route} />
-                    : <Route key={route.title} {...route} />)}
+              {routes.map(route => route.isPrivate
+              ? <ProtectedRoute key={route.title} {...route} />
+              : <Route key={route.title} {...route} />)}
             </Switch>
         </Router>
     )

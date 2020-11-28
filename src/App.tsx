@@ -7,11 +7,15 @@ import store from './redux'
 
 // components
 import Routes from "./routes";
+import { Badges } from './components/molecules';
 
 const App = () => {
+
   return (
     <Provider store={store}>
         <Routes />
+        <Badges />
+        {/* <AppLoadingState loading={loading} /> */}
     </Provider>
   );
 }
