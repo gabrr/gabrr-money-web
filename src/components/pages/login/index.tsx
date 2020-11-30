@@ -1,12 +1,18 @@
+// libraries
 import React from 'react'
 import styled from "styled-components";
+
+// components
 import Logo from '../../atoms/logo';
+import { LoginButton } from '../../molecules';
 
 const Login: React.FC = () => {
     return (
         <Div>
-            <Logo/>
+            <Logo className="gabrr_logo"/>
             <h1>Seja muito bem-vindo!</h1>
+            <LoginButton type="google" className="login_button" />
+            <LoginButton type="apple" className="login_button" />
         </Div>
     )
 }
@@ -21,8 +27,16 @@ const Div = styled.div`
     align-items: center;
     justify-content: center;
 
-    .logo {
+    .gabrr_logo {
         margin-top: 15vh;
+    }
+
+    h1 {
+        margin-bottom: 20vh; 
+    }
+
+    .login_button {
+        margin: 9px auto;    
     }
 
 `

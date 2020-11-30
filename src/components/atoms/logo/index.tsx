@@ -2,7 +2,11 @@ import React from 'react'
 import styled from 'styled-components';
 import logo from "../../../assets/gabrr-money-logo.png";
 
-const Logo: React.FC = () => <Img src={logo} className='logo' alt="gabrr money logo"/>
+interface Props {
+    className?: string
+}
+
+const Logo: React.FC<Props> = ({ className }) => <Img className={className} src={logo} alt="gabrr money logo"/>
 
 export default Logo
 
